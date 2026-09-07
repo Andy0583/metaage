@@ -109,7 +109,7 @@ oc debug node/sno -- chroot /host systemctl restart crio
 ```
 sed -i \
   -e 's/replicas: 2/replicas: 1/' \
-  -e 's/value: ""/value: "192.168.131.0\/24"/' \
+  -e '192s/.*/    value: "192.168.131.0\/24"/' \
   ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
 
 oc create -f ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
