@@ -51,5 +51,9 @@ nav:
   - Container: 
     - OCP SNO 離線安裝: container/snoinstall.md
     - Harbor 離線安裝: container/harbor.md
+  - Dell CSM: 
+    - CSM技術公告: csm/csm.md
+    - CSM安裝: csm/csminstall.md
+    - CSM測試: csm/testing.md
   - Proxmox:
     - 初始安裝設定: pve/install.md
