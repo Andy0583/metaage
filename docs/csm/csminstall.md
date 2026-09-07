@@ -1,6 +1,8 @@
 **登入OCP**
 ```
 oc login api.ocp.andy.com:6443 -u kubeadmin -p MAvMD-mjF22-T6rVY-euWVe
+
+export KUBECONFIG=/home/ocp-offline/sno-install/auth/kubeconfig
 ```
 
 **上傳Dell CSM Image**
@@ -100,30 +102,18 @@ oc apply -f dell-csi-tag-mirror.yaml
 
 oc get mcp master -w
 
-oc debug node/sno -- chroot /host systemctl restart crio
+oc debug node/sno -- chroot /host systemctl restart crio 
+```
 
+**設定安裝yaml及啟用**
+sed -i \
+  -e 's/replicas: 2/replicas: 1/' \
+  -e 's/value: ""/value: "192.168.131.0\/24"/' \
+  ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
 
-oc get csm powerstore -n powerstore -o json > /tmp/csm-before.json
+oc create -f ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
 
-python3 << 'PYEOF'
-import json
-with open('/tmp/csm-before.json') as f:
-    csm = json.load(f)
-
-csm['spec']['driver']['controller']['replicas'] = 1
-
-for env in csm['spec']['driver']['controller']['envs']:
-    if env['name'] == 'X_CSI_POWERSTORE_EXTERNAL_ACCESS':
-        env['value'] = '192.168.131.0/24'
-
-with open('/tmp/csm-after.json', 'w') as f:
-    json.dump(csm, f)
-PYEOF
-
-oc apply -f /tmp/csm-after.json
-
-cd ~/dell-csm-operator-bundle/samples/v2.17.0
-oc create -f storage_csm_powerstore_v2170.yaml
+oc get pod -n powerstore
 ```
 
 
