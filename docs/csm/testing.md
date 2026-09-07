@@ -167,7 +167,7 @@ spec:
         runAsNonRoot: true
         runAsUser: 1000670000
       volumeMounts:
-        - name: test-nas-pvc
+        - name: nas-test-volume
           mountPath: /data
   volumes:
     - name: nas-test-volume
