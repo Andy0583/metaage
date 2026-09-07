@@ -106,6 +106,7 @@ oc debug node/sno -- chroot /host systemctl restart crio
 ```
 
 **設定安裝yaml及啟用**
+```
 sed -i \
   -e 's/replicas: 2/replicas: 1/' \
   -e 's/value: ""/value: "192.168.131.0\/24"/' \
@@ -115,5 +116,3 @@ oc create -f ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v
 
 oc get pod -n powerstore
 ```
-
-
