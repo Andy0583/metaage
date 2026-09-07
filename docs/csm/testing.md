@@ -23,7 +23,9 @@ oc apply -f 99z-worker-zzz-iscsi-config.yaml
 
 oc get mcp master -w
 
+# SNO會重啟（5分鐘）
 
+oc debug node/sno -- chroot /host systemctl is-enabled iscsid multipathd
 ```
 
 **建立Storage Class**
