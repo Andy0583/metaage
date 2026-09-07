@@ -363,7 +363,7 @@ done
 openshift-install --dir=/home/ocp-offline/sno-install agent create image --log-level=info
 ```
 
-### **<font color="red">建立OCP VM</font>**
+### **<font color="red">建立OCP</font>**
 **設定OCP VM**
 - disk.EnableUUID = TRUE
 ```
@@ -375,4 +375,40 @@ tail -f /home/ocp-offline/sno-bootstrap.log
 nohup openshift-install --dir=/home/ocp-offline/sno-install agent wait-for install-complete --log-level=info > /home/ocp-offline/sno-install.log 2>&1 &
 
 tail -f /home/ocp-offline/sno-install.log
+```
+
+**測試登入OCP**
+```
+oc login api.ocp.andy.com:6443 -u kubeadmin -p MAvMD-mjF22-T6rVY-euWVe
+
+export KUBECONFIG=/home/ocp-offline/sno-install/auth/kubeconfig
+```
+
+**建立網路**
+```
+oc debug node/sno -- chroot /host nmcli con add \
+  type ethernet \
+  con-name iscsi-storage \
+  ifname ens34 \
+  ipv4.method manual \
+  ipv4.addresses 192.168.130.201/24 \
+  802-3-ethernet.mtu 9000 \
+  connection.autoconnect yes
+
+oc debug node/sno -- chroot /host nmcli con up iscsi-storage
+
+oc debug node/sno -- chroot /host ping -c 4 -I ens34 192.168.130.250
+
+oc debug node/sno -- chroot /host nmcli con add \
+  type ethernet \
+  con-name nfs-storage \
+  ifname ens35 \
+  ipv4.method manual \
+  ipv4.addresses 192.168.131.201/24 \
+  802-3-ethernet.mtu 9000 \
+  connection.autoconnect yes
+
+oc debug node/sno -- chroot /host nmcli con up nfs-storage
+
+oc debug node/sno -- chroot /host ping -c 4 -I ens35 192.168.131.205
 ```
