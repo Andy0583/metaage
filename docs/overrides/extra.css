@@ -163,7 +163,7 @@ article.md-content__inner > h1:first-child + * {
   padding: 16px 20px;
 }
 .link-box h3 {
-  color: #2962ff;
+  color: #1a1a1a;
   margin-top: 0 !important;
   margin-bottom: 12px;
 }
