@@ -128,6 +128,11 @@ article.md-content__inner > h1:first-child + * {
   margin: 8px 0;
   line-height: 1.4;
   color: #2962ff;
+  transition: color 0.15s;
+}
+.news-card:hover .news-title {
+  color: #0039cb;
+  text-decoration: underline;
 }
 .news-desc {
   font-size: 0.85rem;
@@ -170,6 +175,12 @@ article.md-content__inner > h1:first-child + * {
 .link-box a {
   display: inline;
   color: #2962ff;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.link-box a:hover {
+  color: #0039cb;
+  text-decoration: underline;
 }
 .link-box p {
   margin: 4px 0 !important;
