@@ -127,6 +127,7 @@ article.md-content__inner > h1:first-child + * {
   font-weight: 700;
   margin: 8px 0;
   line-height: 1.4;
+  color: #2962ff;
 }
 .news-desc {
   font-size: 0.85rem;
