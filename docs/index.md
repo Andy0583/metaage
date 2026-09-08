@@ -14,7 +14,7 @@
   <img src="images/index2.png" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:10px;">
   <div class="news-tags"><span>新聞</span><span>GDS</span><span>Nvidia</span></div>
   <div class="news-title">GPU直接讀取儲存裝置</div>
-  <div class="news-desc">若資料供應速度跟不上，即使擁有大量 GPU，也可能因等待資料而無法充分發揮效能</div>
+  <div class="news-desc">AI資料量暴增 輝達推動讓GPU直接讀取儲存裝置、速度逼近記憶體。</div>
 </a>
 </div>
 
