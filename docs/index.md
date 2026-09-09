@@ -52,12 +52,14 @@
       </div>
     </div>
     ---
-    <a href="https://www.dell.com">
-      <img src="images/dell.png" width="170">
-    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.metaage.com.tw">
-      <img src="images/metaage.png" width="200">
-    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://www.ginnet.com.tw">
-      <img src="images/ginnet.png" width="180">
-    </a>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
+      <a href="https://www.dell.com">
+        <img src="images/dell.png" width="170">
+      </a>
+      <a href="https://www.metaage.com.tw">
+        <img src="images/metaage.png" width="200">
+      </a>
+      <a href="https://www.ginnet.com.tw">
+        <img src="images/ginnet.png" width="180">
+      </a>
+    </div>
