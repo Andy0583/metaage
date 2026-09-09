@@ -62,7 +62,7 @@ mv oc-mirror openshift-install oc kubectl /usr/local/bin/
 
 **安裝NTP Server**
 ```
-rm /etc/chrony.conf
+rm /etc/chrony.conf -f
 
 cat > /etc/chrony.conf << 'EOF'
 driftfile /var/lib/chrony/drift
@@ -84,13 +84,15 @@ timedatectl set-time "00:10:00"
 
 **安裝DNS Server**
 ```
+cd
+
 mkdir -p /opt/bind-offline
 
 tar xzvf bind-offline.tar.gz -C /opt/bind-offline
 
 cd /opt/bind-offline
 
-dnf localinstall *.rpm
+dnf localinstall *.rpm -y
 ```
 ```
 vi /etc/named.conf
@@ -209,7 +211,7 @@ cd
 
 mkdir -p /home/ocp-offline/sno-install
 
-mv pull-secret.txt /home/ocp-offline/pull-secret.json
+mv pull-secret.txt /home/ocp-offline/pull-secret.json -f
 
 python3 << 'PYEOF'
 import json, base64
