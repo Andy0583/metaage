@@ -40,10 +40,10 @@
 
 ---
 !!! info "聯絡資訊"
-    <div style="display: flex; align-items: center; gap: 16px;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
       <a href="images/logo.png" target="_blank">
         <img src="images/logo.png" alt="Andy Hsu" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex-shrink: 0; cursor: pointer;">
-      </a>      
+      </a>
       <div style="font-size: 0.7rem;">
       **站長工程師：<font color="#00008B">Andy Hsu</font>** &nbsp;&nbsp; **Email:** andy0583@gmail.com<br>
       **Certificate:** PMP、Dell、Netapp、VMware、RedHat、Veeam<br>
