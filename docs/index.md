@@ -42,7 +42,7 @@
 !!! info "聯絡資訊"
     <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
       <a href="images/logo.png" target="_blank">
-        <img src="images/logo.png" alt="Andy Hsu" style="width: 140px; height: 130px; border-radius: 50%; object-fit: cover; flex-shrink: 0; cursor: pointer;">
+        <img src="images/logo.png" alt="Andy Hsu" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0; cursor: pointer;">
       </a>
       <div style="font-size: 0.8rem;">
       **站長工程師：<font color="#00008B">Andy Hsu</font>** &nbsp;&nbsp; **Email:** andy0583@gmail.com<br>
