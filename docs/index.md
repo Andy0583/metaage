@@ -1,5 +1,5 @@
-<a href="https://dtf-tw.com/2026/index.html">
-  <img src="images/002.jpg" width="800">
+<a href="https://graidtech.com/">
+  <img src="images/index1.png" width="800">
 </a>
 <br>
 <div class="news-grid">
