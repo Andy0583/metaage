@@ -11,7 +11,7 @@
 </a>
 
 <a class="news-card" href="https://hk.finance.yahoo.com/news/ai%E8%B3%87%E6%96%99%E9%87%8F%E6%9A%B4%E5%A2%9E-%E8%BC%9D%E9%81%94%E6%8E%A8%E5%8B%95%E8%AE%93gpu%E7%9B%B4%E6%8E%A5%E8%AE%80%E5%8F%96%E5%84%B2%E5%AD%98%E8%A3%9D%E7%BD%AE-%E9%80%9F%E5%BA%A6%E9%80%BC%E8%BF%91%E8%A8%98%E6%86%B6%E9%AB%94-104438886.html" target="_blank">
-  <img src="images/index2.png" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:10px;">
+  <img src="images/index3.png" style="width:100%; height:180px; object-fit:cover; border-radius:4px; margin-bottom:10px;">
   <div class="news-tags"><span>新聞</span><span>GDS</span><span>Nvidia</span></div>
   <div class="news-title">GPU直接讀取儲存裝置</div>
   <div class="news-desc">AI資料量暴增 輝達推動讓GPU直接讀取儲存裝置、速度逼近記憶體。</div>
