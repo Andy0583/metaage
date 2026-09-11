@@ -163,6 +163,8 @@ systemctl start named
 
 **安裝nmstate-rpms**
 ```
+cd
+
 cd nmstate-rpms/
 
 rpm -Uvh *.rpm
