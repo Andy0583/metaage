@@ -110,7 +110,8 @@ oc debug node/sno -- chroot /host systemctl restart crio
 ```
 vi ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
 # replicas: 1
-# name: X_CSI_POWERSTORE_EXTERNAL_ACCESS ; value: "192.168.131.0/24"
+# name: X_CSI_POWERSTORE_EXTERNAL_ACCESS ; value: 192.168.131.0/24
+# name: X_CSI_POWERSTORE_EXCLUSIVE_ACCESS ; value: "true"
 
 oc create -f ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
 
