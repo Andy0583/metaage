@@ -75,7 +75,7 @@ EOF
 
 systemctl start chronyd
 
-systemctl enable chronyd
+systemctl enable --now chronyd 
 
 timedatectl set-ntp no
 
