@@ -73,13 +73,13 @@ rtcsync
 logdir /var/log/chrony
 EOF
 
-systemctl start chronyd
-
-systemctl enable --now chronyd 
-
 timedatectl set-ntp no
 
-timedatectl set-time "00:10:00"
+timedatectl set-time "2026-09-12 22:50:00"
+
+systemctl start chronyd
+
+systemctl enable --now chronyd
 ```
 
 **安裝DNS Server**
