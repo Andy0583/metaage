@@ -1,7 +1,7 @@
-### **<font color="red">GRAID技術公告</font>**
+## **<font color="red">GRAID技術公告</font>**
 
-**Deploy container on AE**
-- vllm Container
+### Deploy container on AE
+**vllm Container**
 ```
 vllm:
     ipc: host
@@ -15,7 +15,7 @@ vllm:
       - /mnt/graid/models:/workspace:ro
       - /mnt/graid/lmcache:/lmcache
 ```
-- KV offload
+**KV offload**
 ```
 mkdir -p /mnt/graid/models/lmcache_config
 
@@ -26,7 +26,7 @@ max_local_disk_size: 64
 extra_config: {'use_odirect': True}
 EOF
 ```
-- container MPS
+**container MPS**
 ```
 ps-probe:
     ipc: host
@@ -38,7 +38,7 @@ ps-probe:
       - /tmp/nvidia-mps:/tmp/nvidia-mps
       - /tmp/nvidia-log:/tmp/nvidia-log
 ```
-**AE Pre-installer on RHEL**
+### AE Pre-installer on RHEL
 ```
 LOCAL_ISO_PATH=/mnt/dvd/ \
 DKMS_PKG_PATH=/root/dkms-3.4.3-2.el9.noarch.rpm \
