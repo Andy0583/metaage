@@ -1,7 +1,7 @@
 ## **<font color="red">GRAID技術公告</font>**
 
 ### Deploy container on AE
-**vllm Container**
+**vllm MPS**
 ```
 vllm:
     ipc: host
