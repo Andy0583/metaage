@@ -1,6 +1,7 @@
 ### **<font color="red">GRAID技術公告</font>**
 
 **Deploy container on AE**
+- vllm Container
 ```
 vllm:
     ipc: host
@@ -14,6 +15,7 @@ vllm:
       - /mnt/graid/models:/workspace:ro
       - /mnt/graid/lmcache:/lmcache
 ```
+- KV offload
 ```
 mkdir -p /mnt/graid/models/lmcache_config
 
@@ -24,6 +26,7 @@ max_local_disk_size: 64
 extra_config: {'use_odirect': True}
 EOF
 ```
+- container MPS
 ```
 ps-probe:
     ipc: host
