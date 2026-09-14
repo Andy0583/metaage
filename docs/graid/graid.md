@@ -1,6 +1,4 @@
-## **<font color="red">GRAID技術公告</font>**
-
-### Deploy container on AE
+### **<font color="red">Deploy container on AE</font>**
 **vllm MPS**
 ```
 vllm:
@@ -38,7 +36,7 @@ ps-probe:
       - /tmp/nvidia-mps:/tmp/nvidia-mps
       - /tmp/nvidia-log:/tmp/nvidia-log
 ```
-### AE Pre-installer on RHEL
+### **<font color="red">AE Pre-installer on RHEL</font>**
 ```
 LOCAL_ISO_PATH=/mnt/dvd/ \
 DKMS_PKG_PATH=/root/dkms-3.4.3-2.el9.noarch.rpm \
