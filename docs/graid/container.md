@@ -28,7 +28,6 @@ EOF
 ```
 ps-probe:
     ipc: host
-    user: "10001:10001"
     environment:
       CUDA_MPS_PIPE_DIRECTORY: /tmp/nvidia-mps
       CUDA_MPS_LOG_DIRECTORY: /tmp/nvidia-log
