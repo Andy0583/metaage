@@ -102,6 +102,7 @@ EXPECTED_GPU_CARDS="1ff2"
 ```
 
 **安裝SupremeRAID AE Only for T400**
+[檔案下載](https://dtimis-my.sharepoint.com/:u:/g/personal/andyhsu_ginnet_com_tw/IQARKVAs7fgjQaN7ZHb_OfV2AYxJ4dRmUSVmpUtGn9jlMZk?e=sshv5R)
 ```
-bash ****graid-sr-ae-installer-2.0.0-tu75-193-174.run --accept-license
+bash graid-sr-ae-installer-2.0.0-tu75-193-174.run --accept-license
 ```
