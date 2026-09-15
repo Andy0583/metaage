@@ -49,7 +49,6 @@ nav:
     - Deploy container on AE: graid/container.md
     - MPS Deployment: graid/mps.md
     - GRAID Log收集: graid/collection.md
-    - 更新Nvidia driver後無法使用: graid/upgrade.md
   - Container: 
     - OCP SNO 離線安裝: container/snoinstall.md
     - Harbor 離線安裝: container/harbor.md
