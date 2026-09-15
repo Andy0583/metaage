@@ -58,3 +58,4 @@ nav:
     - CSM測試: csm/testing.md
   - Proxmox:
     - 初始安裝設定: pve/install.md
+    - QDevice安裝設定: pve/qdevice.md
