@@ -11,8 +11,9 @@ graid.service: Failed with result 'exit-code'.
 
 + 變更 graid_server_pre.sh
 ```
-cat << 'EOF' >> /usr/bin/graid_server_pre.sh
+vi /usr/bin/graid_server_pre.sh
 
+# 於"set -e"之後加下列一段，wq存檔
 if ! modprobe graid-nvidia 2>/dev/null; then
 
     versions=$(dkms status graid | grep -oP 'graid/\K[^,]+' | sort -u)
@@ -28,7 +29,6 @@ if ! modprobe graid-nvidia 2>/dev/null; then
     modprobe graid-nvidia
 
 fi
-EOF
 ```
 + 重啟服務
 ```
