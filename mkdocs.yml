@@ -56,6 +56,7 @@ nav:
     - CSM技術公告: csm/csm.md
     - CSM安裝: csm/csminstall.md
     - CSM測試: csm/testing.md
+    - Minio POD測試: csm/minio.md
   - Proxmox:
     - 初始安裝設定: pve/install.md
     - QDevice安裝設定: pve/qdevice.md
