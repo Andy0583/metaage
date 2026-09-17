@@ -102,8 +102,6 @@ EOF
 oc apply -f dell-csi-tag-mirror.yaml
 
 oc get mcp master -w
-
-oc debug node/sno -- chroot /host systemctl restart crio 
 ```
 
 **設定安裝yaml及啟用**
