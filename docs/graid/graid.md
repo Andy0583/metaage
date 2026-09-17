@@ -8,3 +8,4 @@ bash graid-sr-pre-installer-2.0.0-nv580-270-x86_64.run \
 
 ### **<font color="red">重要 KB </font>**
 [NVIDIA Driver更新後，GRAID服務無法使用](kb001.md)
+[AI Server安裝八張GPU時，無法偵測到GRAID卡](kb002.md)
