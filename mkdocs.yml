@@ -53,7 +53,6 @@ nav:
     - OCP SNO 離線安裝: container/snoinstall.md
     - Harbor 離線安裝: container/harbor.md
   - Dell CSM: 
-    - CSM技術公告: csm/csm.md
     - CSM安裝: csm/csminstall.md
     - CSI測試: csm/testing.md
     - Minio POD測試: csm/minio.md
