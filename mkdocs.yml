@@ -57,7 +57,6 @@ nav:
     - CSM安裝: csm/csminstall.md
     - CSI測試: csm/testing.md
     - Minio POD測試: csm/minio.md
-    - OCP SNO Backup: container/backup.md
   - Proxmox:
     - 初始安裝設定: pve/install.md
     - QDevice安裝設定: pve/qdevice.md
