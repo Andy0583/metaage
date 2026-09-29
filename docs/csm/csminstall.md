@@ -1,4 +1,3 @@
-### **<font color="red">CSM安裝 for SNO</font>**   
 **登入OCP**
 ```
 oc login api.ocp.andy.com:6443 -u kubeadmin -p MAvMD-mjF22-T6rVY-euWVe
