@@ -1,12 +1,12 @@
 **設定iSCSI及Multipath**
 ```
-cat > 99z-worker-zzz-iscsi-config.yaml << 'EOF'
+cat <<EOF | oc apply -f -
 apiVersion: machineconfiguration.openshift.io/v1
 kind: MachineConfig
 metadata:
+  name: 99-master-iscsid-enable
   labels:
-    machineconfiguration.openshift.io/role: worker
-  name: 99z-master-zzz-iscsi-config
+    machineconfiguration.openshift.io/role: master
 spec:
   config:
     ignition:
@@ -15,11 +15,7 @@ spec:
       units:
       - name: iscsid.service
         enabled: true
-      - name: multipathd.service
-        enabled: true
 EOF
-
-oc apply -f 99z-worker-zzz-iscsi-config.yaml
 
 oc get mcp master -w
 
