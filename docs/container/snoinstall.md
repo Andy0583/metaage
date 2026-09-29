@@ -123,12 +123,12 @@ $TTL 1D
 @       IN NS   bastion.ocp.andy.com.
 @       IN A    172.22.46.200
 
-bastion                 IN      A       172.22.46.200
-harbor                  IN      A       172.22.46.209
-sno                     IN      A       172.22.46.201
-api                     IN      A       172.22.46.201
-api-int                 IN      A       172.22.46.201
-*.apps                  IN      A       172.22.46.201
+bastion                 IN      A       172.22.46.231
+harbor                  IN      A       172.22.46.233
+sno                     IN      A       172.22.46.232
+api                     IN      A       172.22.46.232
+api-int                 IN      A       172.22.46.232
+*.apps                  IN      A       172.22.46.232
 ```
 ```
 vi /var/named/rev.46.22.172
@@ -143,9 +143,9 @@ $TTL 1D
 @       IN NS   bastion.ocp.andy.com.
 
 46.22.172.in-addr.arpa      IN      PTR     bastion.ocp.andy.com
-200   IN      PTR     bastion.ocp.andy.com.
-209   IN      PTR     harbor.ocp.andy.com.
-201   IN      PTR     sno.ocp.andy.com.
+231   IN      PTR     bastion.ocp.andy.com.
+233   IN      PTR     harbor.ocp.andy.com.
+232   IN      PTR     sno.ocp.andy.com.
 ```
 ```
 chgrp named /var/named/named.ocp.andy.com
@@ -292,15 +292,15 @@ apiVersion: v1alpha1
 kind: AgentConfig
 metadata:
   name: sno
-rendezvousIP: 172.22.46.201
+rendezvousIP: 172.22.46.232
 additionalNTPSources:
-  - 172.22.46.200
+  - 172.22.46.231
 hosts:
   - hostname: sno
     role: master
     interfaces:
       - name: ens33
-        macAddress: "00:50:56:a8:14:88"
+        macAddress: "00:50:56:a8:27:fb"
     networkConfig:
       interfaces:
         - name: ens33
@@ -309,13 +309,13 @@ hosts:
           ipv4:
             enabled: true
             address:
-              - ip: 172.22.46.201
+              - ip: 172.22.46.232
                 prefix-length: 24
             dhcp: false
       dns-resolver:
         config:
           server:
-            - 172.22.46.200
+            - 172.22.46.231
       routes:
         config:
           - destination: 0.0.0.0/0
