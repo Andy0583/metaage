@@ -395,7 +395,7 @@ oc debug node/sno -- chroot /host nmcli con add \
   con-name iscsi-storage \
   ifname ens34 \
   ipv4.method manual \
-  ipv4.addresses 192.168.130.201/24 \
+  ipv4.addresses 192.168.130.234/24 \
   802-3-ethernet.mtu 9000 \
   connection.autoconnect yes
 
@@ -408,7 +408,7 @@ oc debug node/sno -- chroot /host nmcli con add \
   con-name nfs-storage \
   ifname ens35 \
   ipv4.method manual \
-  ipv4.addresses 192.168.131.201/24 \
+  ipv4.addresses 192.168.131.234/24 \
   802-3-ethernet.mtu 9000 \
   connection.autoconnect yes
 
