@@ -121,7 +121,7 @@ $TTL 1D
                                         1W      ; expire
                                         1D )    ; minimum
 @       IN NS   bastion.ocp.andy.com.
-@       IN A    172.22.46.200
+@       IN A    172.22.46.231
 
 bastion                 IN      A       172.22.46.231
 harbor                  IN      A       172.22.46.233
