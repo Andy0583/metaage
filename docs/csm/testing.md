@@ -1,29 +1,3 @@
-**設定iSCSI及Multipath**
-```
-cat <<EOF | oc apply -f -
-apiVersion: machineconfiguration.openshift.io/v1
-kind: MachineConfig
-metadata:
-  name: 99-master-iscsid-enable
-  labels:
-    machineconfiguration.openshift.io/role: master
-spec:
-  config:
-    ignition:
-      version: 3.2.0
-    systemd:
-      units:
-      - name: iscsid.service
-        enabled: true
-EOF
-
-oc get mcp master -w
-
-# SNO會重啟（5分鐘）
-
-oc debug node/sno -- chroot /host systemctl is-enabled iscsid multipathd
-```
-
 **建立Storage Class**
 ```
 cat > sc-nas.yaml << 'EOF'
