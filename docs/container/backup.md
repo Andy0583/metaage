@@ -12,6 +12,8 @@ chmod 644 /home/core/assets/backup/*
 
 exit
 
+exit
+
 # Bastion：將備份檔案傳出
 scp core@172.22.46.232:/home/core/assets/backup/* /root/backup
 
