@@ -94,6 +94,9 @@ spec:
     interval: 30s
 EOF
 ```
+```
+oc get svc -n powerstore -l app.kubernetes.io/name=otel-collector
+```
 
 **相關查詢**
 ```
