@@ -49,15 +49,3 @@
       **<font color="red">請保持心中的光，因為你不知道，誰會藉著你的光走出黑暗。</font>**
       </div>
     </div>
-    ---
-    <div style="display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;">
-      <a href="https://www.dell.com">
-        <img src="images/dell.png" width="170">
-      </a>
-      <a href="https://www.metaage.com.tw">
-        <img src="images/metaage.png" width="200">
-      </a>
-      <a href="https://www.ginnet.com.tw">
-        <img src="images/ginnet.png" width="180">
-      </a>
-    </div>
