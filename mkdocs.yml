@@ -12,18 +12,9 @@ theme:
   icon:
     logo: material/server-network
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: 切換至深色模式
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: 切換至淺色模式
+    scheme: default
+    primary: indigo
+    accent: indigo
   features:
     - navigation.tabs
     - navigation.top
