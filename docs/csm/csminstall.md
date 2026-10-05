@@ -105,12 +105,12 @@ oc get mcp master -w
 
 **設定安裝yaml及啟用**
 ```
-vi ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
+vi /root/dell-csm-operator-bundle/samples/v1.18.0/drivers/powerstore/storage_csm_powerstore.yaml
 # replicas: 1
 # name: X_CSI_POWERSTORE_EXTERNAL_ACCESS ; value: 192.168.131.0/24
 # name: X_CSI_POWERSTORE_EXCLUSIVE_ACCESS ; value: "true"
 
-oc create -f ~/dell-csm-operator-bundle/samples/v2.17.0/storage_csm_powerstore_v2170.yaml
+oc create -f /root/dell-csm-operator-bundle/samples/v1.18.0/drivers/powerstore/storage_csm_powerstore.yaml
 
 oc get pod -n powerstore
 ```
